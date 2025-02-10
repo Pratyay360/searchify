@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -22,7 +22,7 @@ async function searchWeb(text: string) {
   }
 }
 
-export default function ChatPage() {
+function ChatContent() {
   const searchParams = useSearchParams();
   const [chatHistory, setChatHistory] = useState<string[]>([]);
   const [inputText, setInputText] = useState(searchParams.get('search') || '');
@@ -155,5 +155,13 @@ export default function ChatPage() {
         </Card>
       </main>
     </div>
+  );
+}
+
+export default function ChatPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ChatContent />
+    </Suspense>
   );
 }
