@@ -26,15 +26,14 @@ export default function HomePage() {
     setSearchText(query);
   };
   const exampleQueries = [
-    "Explain quantum computing in simple terms",
-    "Latest breakthroughs in AI research",
-    "Compare machine learning frameworks",
-    "Generate python code for neural network",
-    "How does blockchain work?",
-    "What is the future of quantum AI?",
-    "How does the brain process language?",
-    "How do self-driving cars work?",
     "Top cat breeds",
+    "What is the capital of France?",
+    "How to make a pizza",
+    "What is the tallest mountain in the world?",
+    "What is the population of India?",
+    "What is the largest city of the United States?",
+    "What is the largest desert in the world?",
+    "How Solar Panels Work",
   ];
 
   return (
