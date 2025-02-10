@@ -3,14 +3,10 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Toaster, toast } from "sonner";
 
 import {
   SearchIcon,
-  RocketIcon,
-  SparklesIcon,
-  BrainCircuitIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -29,33 +25,16 @@ export default function HomePage() {
   const handleQueryClick = (query: string) => {
     setSearchText(query);
   };
-
-  const features = [
-    {
-      title: "Natural Language Processing",
-      description: "Understands queries in conversational language",
-      icon: <SparklesIcon className="w-6 h-6 mb-4 text-primary" />,
-      bg: "bg-gradient-to-br from-purple-100/50 to-background dark:from-purple-900/20 dark:to-background",
-    },
-    {
-      title: "Predictive Search",
-      description: "Anticipates your needs with smart suggestions",
-      icon: <BrainCircuitIcon className="w-6 h-6 mb-4 text-primary" />,
-      bg: "bg-gradient-to-br from-blue-100/50 to-background dark:from-blue-900/20 dark:to-background",
-    },
-    {
-      title: "Instant Answers",
-      description: "Direct responses for complex questions",
-      icon: <RocketIcon className="w-6 h-6 mb-4 text-primary" />,
-      bg: "bg-gradient-to-br from-green-100/50 to-background dark:from-green-900/20 dark:to-background",
-    },
-  ];
-
   const exampleQueries = [
     "Explain quantum computing in simple terms",
     "Latest breakthroughs in AI research",
     "Compare machine learning frameworks",
     "Generate python code for neural network",
+    "How does blockchain work?",
+    "What is the future of quantum AI?",
+    "How does the brain process language?",
+    "How do self-driving cars work?",
+    "Top cat breeds",
   ];
 
   return (
@@ -120,41 +99,6 @@ export default function HomePage() {
                     {query}
                   </p>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Features Grid */}
-          <section className="py-16 mx-auto px-10">
-            <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Why Choose Us?
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <Card
-                  key={index}
-                  className={cn(
-                    "hover:shadow-xl transition-all duration-300 hover:-translate-y-2",
-                    feature.bg,
-                    "border-muted/50 backdrop-blur-sm"
-                  )}
-                >
-                  <CardHeader>
-                    <div className="mb-4">
-                      <div className="w-12 h-12 rounded-full bg-muted/10 shadow-sm flex items-center justify-center">
-                        {feature.icon}
-                      </div>
-                    </div>
-                    <CardTitle className="text-2xl text-foreground">
-                      {feature.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
               ))}
             </div>
           </section>
