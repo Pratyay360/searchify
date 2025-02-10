@@ -6,7 +6,7 @@ import {
 
 export default async function genAi(s: string) {
   const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_API!);
-  const MODEL_NAME = "gemini-pro";
+  const MODEL_NAME = "gemini-2.0-flash";
   const generationConfig = {
     temperature: 0.45,
     candidateCount: 1,

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { BrainCircuitIcon } from "lucide-react";
 import { ModeToggle } from "@/components/themer/themer";
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -9,8 +10,8 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-20 px-6">
         {/* Logo Section */}
         <div className="flex items-center gap-3 group">
-          <div className="p-2 rounded-full bg-gradient-to-tr from-purple-600 to-blue-500 group-hover:scale-105 transition-transform">
-            <BrainCircuitIcon className="w-7 h-7 text-white" />
+          <div className="p-2 rounded-full bg-gradient-to-tr from-purple-600 to-blue-500 group-hover:scale-105 transition-transform" >
+            <Link href={"/"}><BrainCircuitIcon className="w-7 h-7 text-white" /> </Link>
           </div>
           <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
             AISearch
