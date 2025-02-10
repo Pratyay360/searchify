@@ -32,12 +32,12 @@ export default async function genAi(s: string) {
     safetySettings,
   });
   const response = result.response;
-  let sentence: any = Array.isArray(response)
+  const sentence: any = Array.isArray(response)
     ? response[0]?.candidates?.[0]?.content?.parts?.[0]?.text
     : response?.candidates?.[0]?.content?.parts?.[0]?.text;
-  let sentenc: any = sentence?.replace(/"/g, "");
-  let senten: any = sentenc?.replace(/,"/g, "");
-  let sente: any = senten?.replace(/."/g, "");
-  let sent: any = sente?.split('"').join("");
+  const sentenc: any = sentence?.replace(/"/g, "");
+  const senten: any = sentenc?.replace(/,"/g, "");
+  const sente: any = senten?.replace(/."/g, "");
+  const sent: any = sente?.split('"').join("");
   return sent;
 }
