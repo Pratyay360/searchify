@@ -46,8 +46,7 @@ export default function HomePage() {
               Search Smarter with AI
             </h1>
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Ask complex questions. Get intelligent answers. Powered by
-              advanced natural language processing and machine learning.
+              Ask complex questions. Get answers powered by Gemini AI.
             </p>
 
             {/* Animated Search Bar */}
