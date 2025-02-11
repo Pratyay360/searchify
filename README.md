@@ -11,13 +11,6 @@ Model used `gemini-pro`
 
 [<img alt="Visit Website" src="https://agrilyze.ca/wp-content/uploads/2020/05/visit-website-button.png" width="200">](https://searchify-puce.vercel.app/)
 
-## Features
-
-- Fast and efficient search engine
-- AI-powered search results
-- Easy to integrate with React applications
-- Built with modern technologies like Next.js and Tailwind CSS
-
 ## Installation
 
 To install the necessary dependencies, run:
